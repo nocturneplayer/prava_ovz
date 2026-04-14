@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Нормативно-правовое обеспечение инклюзивного взаимодействия</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI",Arial;
+background:#f4f7fb;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#2c3e50;
+}
+
+nav button{
+background:none;
+border:none;
+font-size:16px;
+margin-left:25px;
+cursor:pointer;
+font-weight:600;
+color:#2c3e50;
+}
+
+nav button:hover{
+color:#3498db;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(120deg,#3498db,#6dd5fa);
+color:white;
+}
+
+.hero h1{
+font-size:42px;
+max-width:900px;
+line-height:1.3;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:white;
+color:#3498db;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* SECTION */
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+text-align:center;
+font-size:32px;
+margin-bottom:50px;
+}
+
+/* CATEGORY */
+
+.category{
+margin-bottom:50px;
+}
+
+.category h3{
+margin-bottom:20px;
+color:#2c3e50;
+font-size:24px;
+}
+
+/* INTERNATIONAL */
+
+.international{
+background:#e8f4ff;
+border-left:6px solid #3498db;
+padding:25px;
+border-radius:10px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:22px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card a{
+text-decoration:none;
+color:#2c3e50;
+font-weight:600;
+}
+
+.card p{
+font-size:14px;
+margin-top:10px;
+color:#666;
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:50px;
+}
+
+.gallery img{
+width:280px;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:40px;
+max-width:650px;
+border-radius:12px;
+text-align:center;
+animation:fade 0.4s;
+}
+
+@keyframes fade{
+from{opacity:0; transform:scale(0.9);}
+to{opacity:1; transform:scale(1);}
+}
+
+.close{
+margin-top:20px;
+padding:10px 25px;
+background:#3498db;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#2c3e50;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:60px;
+}
+
+</style>
+
+<script>
+
+function openAbout(){
+document.getElementById("aboutModal").style.display="flex";
+}
+
+function closeAbout(){
+document.getElementById("aboutModal").style.display="none";
+}
+
+function goToLaws(){
+document.getElementById("laws").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Инклюзивное взаимодействие</div>
+
+<nav>
+<button onclick="openAbout()">О проекте</button>
+<button onclick="goToLaws()">Нормативные акты</button>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+Нормативно-правовое обеспечение
+инклюзивного взаимодействия
+</h1>
+
+<button onclick="goToLaws()">Перейти к нормативным актам</button>
+
+</section>
+
+
+<section class="section" id="laws">
+
+<h2>Нормативно-правовые акты</h2>
+
+
+<div class="category international">
+
+<h3>🌍 Международные документы</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Всеобщая_декларация_прав_человека.pdf" target="_blank">
+Всеобщая декларация прав человека
+</a>
+<p>Резолюция 217 A (III) Генеральной Ассамблеи ООН от 10.12.1948</p>
+</div>
+
+<div class="card">
+<a href="pdf/Конвенция о правах ребёнка.pdf" target="_blank">
+Конвенция о правах ребенка
+</a>
+<p>Одобрена Генеральной Ассамблеей ООН 20.11.1989</p>
+</div>
+
+<div class="card">
+<a href="pdf/Конвенция о правах инвалидов.pdf" target="_blank">
+Конвенция о правах инвалидов
+</a>
+<p>Ратифицирована Федеральным законом №46-ФЗ от 03.05.2012</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🇷🇺 Российская Федерация — Основные документы</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Конституция_Российской_Федерации.pdf" target="_blank">
+Конституция Российской Федерации
+</a>
+<p>Ст.7, 39, 41 — социальное государство, соцзащита, здоровье</p>
+</div>
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«О_социальной_защите_инвалидов_в_Российской_Федерации».pdf" target="_blank">
+ФЗ «О социальной защите инвалидов в РФ» №181-ФЗ
+</a>
+<p>Ст.15 — доступность среды; ст.21-24 — квоты и занятость</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>📚 Образование и культура</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«Об_образовании_в_Российской_Федерации».pdf" target="_blank">
+ФЗ «Об образовании в РФ» №273-ФЗ
+</a>
+<p>Ст.5, 79 — образование обучающихся с ОВЗ</p>
+</div>
+
+<div class="card">
+<a href="pdf/Приказ_Минкультуры_России_«Об_утверждении_Порядка_обеспечения_условий.pdf" target="_blank">
+Приказ Минкультуры №2834
+</a>
+<p>Доступность культурных ценностей для инвалидов</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>💼 Труд, занятость и ответственность</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«О_занятости_населения_в_Российской_Федерации».pdf" target="_blank">
+Закон «О занятости населения в РФ»
+</a>
+<p>Содействие занятости граждан, нуждающихся в соцзащите</p>
+</div>
+
+<div class="card">
+<a href="pdf/Постановление_Правительства_Российской_Федерации_«О_порядке_выполнения.pdf" target="_blank">
+Постановление Правительства №366
+</a>
+<p>Квоты для приема на работу инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Трудовой_кодекс_Российской_Федерации.pdf" target="_blank">
+Трудовой кодекс РФ
+</a>
+<p>Ст.92, 96, 99, 128 — особенности труда инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Кодекс_Российской_Федерации_об_административных_правонарушениях.pdf" target="_blank">
+КоАП РФ
+</a>
+<p>Ответственность за нарушение прав инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Гражданский_кодекс_Российской_Федерации.pdf" target="_blank">
+Гражданский кодекс РФ
+</a>
+<p>Ст.29-30, 1149 — защита прав нетрудоспособных</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🦻 Специализированные услуги и ГОСТ</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Постановление_Правительства_Российской_Федерации_«О_порядке_предоставления.pdf" target="_blank">
+Постановление Правительства №608
+</a>
+<p>Предоставление услуг сурдоперевода</p>
+</div>
+
+<div class="card">
+<a href="pdf/ГОСТ Р 52872-2019.pdf" target="_blank">
+ГОСТ Р 52872-2019
+</a>
+<p>Доступность интернет-ресурсов для инвалидов по зрению</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="modal" id="aboutModal">
+
+<div class="modal-content">
+
+<h2>О проекте</h2>
+
+<p style="margin-top:15px">
+
+Проект по дисциплине  
+«Теория и методика инклюзивного взаимодействия»
+
+<br><br>
+
+на тему  
+<b>«Нормативно-правовое обеспечение инклюзивного взаимодействия»</b>
+
+<br><br>
+
+Работу выполнили студентки  
+2 курса 3 группы
+
+<br><br>
+
+А.И. Пронина  
+<br>
+А.Н. Шегердюкова  
+<br>
+Д.А. Дюкова  
+<br>
+А.Н. Шацких
+
+</p>
+
+<button class="close" onclick="closeAbout()">Закрыть</button>
+
+</div>
+
+</div>
+
+
+<footer>
+
+Учебный проект • 2026
+
+</footer>
+
+</body>
+</html>
