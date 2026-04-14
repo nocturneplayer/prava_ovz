@@ -1,10 +1,9 @@
+Хорошо, я чуть отредактировал код, теперь исправляй именно эту версию, мне кажется фотографии можно разместить где-то в другом месте, подумай над этим.
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Нормативно-правовое обеспечение инклюзивного взаимодействия</title>
 
 <style>
@@ -39,11 +38,6 @@ z-index:100;
 font-weight:700;
 font-size:20px;
 color:#2c3e50;
-}
-
-nav{
-display:flex;
-flex-wrap:wrap;
 }
 
 nav button{
@@ -109,41 +103,7 @@ margin:auto;
 .section h2{
 text-align:center;
 font-size:32px;
-margin-bottom:20px;
-}
-
-.section p{
-text-align:center;
-max-width:800px;
-margin:auto;
-margin-bottom:40px;
-color:#666;
-}
-
-/* PHOTO BLOCK */
-
-.photo-section{
-background:white;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.gallery img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.gallery img:hover{
-transform:scale(1.04);
+margin-bottom:50px;
 }
 
 /* CATEGORY */
@@ -200,6 +160,24 @@ margin-top:10px;
 color:#666;
 }
 
+/* GALLERY */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:50px;
+}
+
+.gallery img{
+width:280px;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
 /* MODAL */
 
 .modal{
@@ -212,7 +190,6 @@ height:100%;
 background:rgba(0,0,0,0.6);
 justify-content:center;
 align-items:center;
-padding:20px;
 }
 
 .modal-content{
@@ -247,65 +224,6 @@ color:white;
 text-align:center;
 padding:20px;
 margin-top:60px;
-}
-
-/* 📱 АДАПТАЦИЯ ПОД ТЕЛЕФОН */
-
-@media (max-width:768px){
-
-header{
-padding:15px 20px;
-flex-direction:column;
-gap:10px;
-}
-
-nav button{
-margin-left:10px;
-margin-right:10px;
-}
-
-.hero{
-height:auto;
-padding:80px 20px;
-}
-
-.hero h1{
-font-size:28px;
-}
-
-.hero button{
-font-size:16px;
-padding:12px 25px;
-}
-
-.section{
-padding:60px 15px;
-}
-
-.section h2{
-font-size:26px;
-}
-
-.category h3{
-font-size:20px;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.gallery{
-grid-template-columns:1fr;
-}
-
-.gallery img{
-height:220px;
-}
-
-.modal-content{
-padding:25px;
-}
-
 }
 
 </style>
@@ -356,27 +274,165 @@ behavior:"smooth"
 </section>
 
 
-<section class="section photo-section">
-
-<h2>Инклюзивная среда</h2>
-
-<p>
-Создание доступной среды является важным условием реализации прав людей
-с ограниченными возможностями здоровья и их полноценного участия
-в общественной жизни.
-</p>
-
-</section>
-
-<!-- ДАЛЬШЕ ИДЕТ ТВОЙ БЛОК НПА БЕЗ ИЗМЕНЕНИЙ -->
-
 <section class="section" id="laws">
 
 <h2>Нормативно-правовые акты</h2>
 
-<!-- категории НПА остаются как у тебя -->
+
+<div class="category international">
+
+<h3>🌍 Международные документы</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Всеобщая_декларация_прав_человека.pdf" target="_blank">
+Всеобщая декларация прав человека
+</a>
+<p>Резолюция 217 A (III) Генеральной Ассамблеи ООН от 10.12.1948</p>
+</div>
+
+<div class="card">
+<a href="pdf/Конвенция о правах ребёнка.pdf" target="_blank">
+Конвенция о правах ребенка
+</a>
+<p>Одобрена Генеральной Ассамблеей ООН 20.11.1989</p>
+</div>
+
+<div class="card">
+<a href="pdf/Конвенция о правах инвалидов.pdf" target="_blank">
+Конвенция о правах инвалидов
+</a>
+<p>Ратифицирована Федеральным законом №46-ФЗ от 03.05.2012</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🇷🇺 Российская Федерация — Основные документы</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Конституция_Российской_Федерации.pdf" target="_blank">
+Конституция Российской Федерации
+</a>
+<p>Ст.7, 39, 41 — социальное государство, соцзащита, здоровье</p>
+</div>
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«О_социальной_защите_инвалидов_в_Российской_Федерации».pdf" target="_blank">
+ФЗ «О социальной защите инвалидов в РФ» №181-ФЗ
+</a>
+<p>Ст.15 — доступность среды; ст.21-24 — квоты и занятость</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>📚 Образование и культура</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«Об_образовании_в_Российской_Федерации».pdf" target="_blank">
+ФЗ «Об образовании в РФ» №273-ФЗ
+</a>
+<p>Ст.5, 79 — образование обучающихся с ОВЗ</p>
+</div>
+
+<div class="card">
+<a href="pdf/Приказ_Минкультуры_России_«Об_утверждении_Порядка_обеспечения_условий.pdf" target="_blank">
+Приказ Минкультуры №2834
+</a>
+<p>Доступность культурных ценностей для инвалидов</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>💼 Труд, занятость и ответственность</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Федеральный_закон_«О_занятости_населения_в_Российской_Федерации».pdf" target="_blank">
+Закон «О занятости населения в РФ»
+</a>
+<p>Содействие занятости граждан, нуждающихся в соцзащите</p>
+</div>
+
+<div class="card">
+<a href="pdf/Постановление_Правительства_Российской_Федерации_«О_порядке_выполнения.pdf" target="_blank">
+Постановление Правительства №366
+</a>
+<p>Квоты для приема на работу инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Трудовой_кодекс_Российской_Федерации.pdf" target="_blank">
+Трудовой кодекс РФ
+</a>
+<p>Ст.92, 96, 99, 128 — особенности труда инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Кодекс_Российской_Федерации_об_административных_правонарушениях.pdf" target="_blank">
+КоАП РФ
+</a>
+<p>Ответственность за нарушение прав инвалидов</p>
+</div>
+
+<div class="card">
+<a href="pdf/Гражданский_кодекс_Российской_Федерации.pdf" target="_blank">
+Гражданский кодекс РФ
+</a>
+<p>Ст.29-30, 1149 — защита прав нетрудоспособных</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category">
+
+<h3>🦻 Специализированные услуги и ГОСТ</h3>
+
+<div class="cards">
+
+<div class="card">
+<a href="pdf/Постановление_Правительства_Российской_Федерации_«О_порядке_предоставления.pdf" target="_blank">
+Постановление Правительства №608
+</a>
+<p>Предоставление услуг сурдоперевода</p>
+</div>
+
+<div class="card">
+<a href="pdf/ГОСТ Р 52872-2019.pdf" target="_blank">
+ГОСТ Р 52872-2019
+</a>
+<p>Доступность интернет-ресурсов для инвалидов по зрению</p>
+</div>
+
+</div>
+
+</div>
 
 </section>
+
 
 <div class="modal" id="aboutModal">
 
